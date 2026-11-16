@@ -29,5 +29,14 @@ python3 -m venv .venv && .venv/bin/pip install -e .[dev]
 .venv/bin/python -m pytest
 .venv/bin/borrarduplicados
 ```
-Versión Windows: GitHub Actions → «Versión Windows» → Run workflow (o una etiqueta `v*`);
-deja `BorrarDuplicados-windows.zip` como artefacto.
+## Windows
+
+Descarga **`BorrarDuplicados-instalador.exe`** desde [Releases](../../releases/latest), ábrelo y sigue
+los pasos. No pide permisos de administrador, crea el acceso directo en el escritorio y se desinstala
+desde «Agregar o quitar programas». Si Windows muestra «Windows protegió su PC», pulsa
+*Más información → Ejecutar de todas formas* (el instalador no está firmado).
+
+También hay una versión portable (`BorrarDuplicados-portable.zip`): descomprímela y abre
+`BorrarDuplicados.exe`.
+
+Para publicar una versión nueva: sube una etiqueta `v*` (por ejemplo `git tag v1.0.1 && git push --tags`).
