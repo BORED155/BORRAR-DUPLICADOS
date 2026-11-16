@@ -1,0 +1,29 @@
+name: Versión Windows
+
+on:
+  workflow_dispatch:
+  push:
+    tags: ["v*"]
+
+jobs:
+  exe:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Instalar dependencias
+        run: |
+          python -m pip install --upgrade pip
+          pip install . pyinstaller pytest
+      - name: Pruebas
+        run: python -m pytest -q
+      - name: Armar el .exe
+        run: pyinstaller --noconfirm --windowed --onedir --name "BorrarDuplicados" empaquetar/lanzador.py
+      - name: Comprimir
+        run: Compress-Archive -Path dist/BorrarDuplicados -DestinationPath BorrarDuplicados-windows.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: BorrarDuplicados-windows
+          path: BorrarDuplicados-windows.zip
