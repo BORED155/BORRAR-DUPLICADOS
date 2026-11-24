@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+<g id="foto">
+<rect x="10" y="58" width="112" height="112" rx="14" fill="#e0f2fe" stroke="#0369a1" stroke-width="8"/>
+<circle cx="88" cy="90" r="12" fill="#facc15"/>
+<path d="M18 160l34-44 26 30 16-18 24 32z" fill="#16a34a"/>
+</g>
+<use href="#foto" x="124"/>
+<circle cx="66" cy="176" r="34" fill="#22c55e" stroke="#fff" stroke-width="7"/>
+<path d="M50 177l11 12 22-24" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="190" cy="176" r="34" fill="#ef4444" stroke="#fff" stroke-width="7"/>
+<path d="M177 163l26 26M203 163l-26 26" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
+</svg>
