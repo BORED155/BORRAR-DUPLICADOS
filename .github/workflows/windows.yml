@@ -41,4 +41,5 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release create "${{ github.ref_name }}" dist/BorrarDuplicados-instalador.exe BorrarDuplicados-portable.zip --title "Borrar duplicados ${{ github.ref_name }}" --notes "Windows: descarga BorrarDuplicados-instalador.exe y ábrelo."
+        run: |
+          gh release create "${{ github.ref_name }}" dist/BorrarDuplicados-instalador.exe BorrarDuplicados-portable.zip --title "Borrar duplicados ${{ github.ref_name }}" --notes "Windows: descarga BorrarDuplicados-instalador.exe y ábrelo."
