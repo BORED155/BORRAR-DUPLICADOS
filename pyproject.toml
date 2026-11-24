@@ -8,7 +8,7 @@ version = "1.0.1"
 description = "Borrar duplicados: encuentra fotos iguales o parecidas y manda las sobrantes a la papelera"
 readme = "README.md"
 requires-python = ">=3.10"
-dependencies = ["PySide6>=6.6", "Pillow>=10"]
+dependencies = ["PySide6>=6.5", "Pillow>=10"]
 
 [project.optional-dependencies]
 dev = ["pytest>=8"]
